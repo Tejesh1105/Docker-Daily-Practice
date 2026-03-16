@@ -1,0 +1,65 @@
+TROUBLESHOOTING CHALLENGE
+You ran:
+docker run -d -p 8080:80 nginx
+Container is running.
+But browser shows:
+This site can’t be reached
+Explain:
+Possible root causes (minimum 5)
+How you would debug step-by-step
+Exact commands you would use
+How to verify port binding
+
+Solution :-
+Troubleshooting — Browser Cannot Reach
+
+Possible causes:
+
+Host firewall blocking 8080
+
+Cloud security group blocking port
+
+Container not actually running
+
+Port already in use
+
+Docker running inside VM (wrong IP)
+
+Nginx not listening on 0.0.0.0
+
+SELinux blocking
+
+Wrong bind address
+
+Wrong network mode
+
+Debug Steps
+
+Check container:
+
+docker ps
+
+Check port binding:
+
+docker port <container_id>
+
+Inspect networking:
+
+docker inspect <container_id>
+
+Check listening ports:
+
+ss -tulnp | grep 8080
+
+Test locally:
+
+curl localhost:8080
+
+Test inside container:
+
+docker exec -it <container_id> sh
+curl localhost
+
+Check logs:
+
+docker logs <container_id>
