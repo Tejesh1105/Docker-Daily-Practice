@@ -1,0 +1,68 @@
+What is the difference between:
+Docker Image
+Docker Container
+Docker Layer
+Explain how they relate internally.
+
+Solution:-
+🔹 Docker Image
+
+Immutable template
+
+Read-only
+
+Built from Dockerfile
+
+Composed of layers
+
+It is NOT a stopped container.
+
+🔹 Docker Container
+
+Runtime instance of image
+
+Adds writable layer on top
+
+Has:
+
+Namespaces
+
+Cgroups
+
+Network interface
+
+PID 1 process
+
+Image = Blueprint
+Container = Running house built from blueprint
+
+🔹 Docker Layers
+
+Each Dockerfile instruction:
+
+RUN
+
+COPY
+
+ADD
+
+Creates a new filesystem layer.
+
+Docker uses OverlayFS:
+
+Layer 1
+Layer 2
+Layer 3
+-------------
+Writable layer (container)
+
+Layers are:
+
+Immutable
+
+Cached
+
+Shared across images
+
+This is why:
+Multiple containers can use same image efficiently.
