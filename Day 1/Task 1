@@ -1,0 +1,16 @@
+Task 1 – CLI
+Run an Nginx container:
+In detached mode
+Name it web01
+Map port 8080 on host to 80 in container
+Use official image
+Ensure it auto-restarts if it crashes
+Write the exact command.
+
+Solution :-
+
+docker run -d \
+  --name web01 \
+  -p 8080:80 \
+  --restart unless-stopped \
+  nginx:latest
