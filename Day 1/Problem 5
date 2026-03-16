@@ -1,0 +1,25 @@
+What are cgroups?
+What problem do they solve inside containers?
+
+Solution :-
+
+Control Groups (cgroups):
+They:
+
+Limit CPU usage
+
+Limit memory usage
+
+Limit I/O
+
+Track resource usage
+
+Example:
+
+docker run --memory=100m nginx
+
+If container exceeds 100MB:
+→ OOM kill
+
+Without cgroups:
+One container could consume entire host memory.
