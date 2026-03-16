@@ -1,0 +1,46 @@
+What are Linux namespaces?
+Name at least 4 types and explain what each isolates.
+
+Solution:-
+Namespaces isolate system resources.
+
+Common ones:
+
+🔹 PID Namespace
+
+Isolates process IDs.
+Inside container:
+
+First process = PID 1
+
+🔹 NET Namespace
+
+Isolates:
+
+Network interfaces
+
+IP addresses
+
+Routing tables
+
+Ports
+
+Each container has its own network stack.
+
+🔹 MNT Namespace
+
+Isolates mount points.
+Each container has its own root filesystem.
+
+🔹 UTS Namespace
+
+Isolates hostname.
+
+🔹 IPC Namespace
+
+Isolates shared memory and message queues.
+
+🔹 USER Namespace
+
+Maps container UID to different host UID.
+Important for security.
