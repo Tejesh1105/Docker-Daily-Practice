@@ -1,0 +1,29 @@
+Task 2 – Image Inspection
+Pull nginx:latest
+Then:
+List images
+Inspect the image
+Show image layers
+Run container interactively with shell access
+Write the commands.
+
+Solution :-
+Pull:
+
+docker pull nginx:latest
+
+List images:
+
+docker images
+
+Inspect:
+
+docker inspect nginx:latest
+
+Show layers:
+
+docker history nginx:latest
+
+Interactive shell:
+
+docker run -it --rm nginx:latest sh
