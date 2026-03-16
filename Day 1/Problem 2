@@ -1,0 +1,95 @@
+Containers vs Virtual Machines
+Explain differences in:
+Architecture
+Resource usage
+Boot time
+Isolation level
+Kernel usage
+
+Solution:-
+🔹 Architecture
+Virtual Machine:
+Hardware
+→ Hypervisor
+→ Guest OS
+→ Binaries/Libraries
+→ App
+
+Each VM:
+
+Has its own kernel
+
+Has its own full OS
+
+Container:
+Hardware
+→ Host OS
+→ Host Kernel
+→ Docker Daemon
+→ Container (isolated process)
+
+Containers:
+
+Share host kernel
+
+Use namespaces + cgroups
+
+No separate OS
+
+🔹 Resource Usage
+
+VM:
+
+Full OS memory footprint
+
+Kernel memory
+
+Virtual hardware
+
+Heavy storage
+
+Container:
+
+Just processes
+
+Shared kernel
+
+Much smaller memory footprint
+
+🔹 Boot Time
+
+VM:
+
+Boots entire OS (minutes)
+
+Container:
+
+Starts process (milliseconds)
+
+🔹 Isolation Level
+
+VM:
+
+Hardware-level isolation
+
+Strong security boundary
+
+Container:
+
+Process-level isolation
+
+Shared kernel
+
+Weaker boundary
+
+🔹 Kernel Usage
+
+VM:
+
+Each VM has its own kernel
+
+Container:
+
+All containers share host kernel
+
+This is critical.
