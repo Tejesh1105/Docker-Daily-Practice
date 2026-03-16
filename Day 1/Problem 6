@@ -1,0 +1,63 @@
+Scenario:
+A developer says:
+“It works on my machine but not on the server.”
+You are asked to containerize the app.
+Explain:
+Why Docker reduces this issue
+What still can go wrong even with Docker
+What you would verify before blaming Docker
+
+Solution :-
+Why Docker Reduces This
+
+Because:
+
+Same image runs everywhere
+
+Same dependencies
+
+Same OS libraries
+
+Same runtime
+
+Immutable build
+
+Environment becomes reproducible.
+
+What Can Still Go Wrong
+
+Different CPU architecture (arm64 vs amd64)
+
+Wrong environment variables
+
+Volume mount path differences
+
+File permission issues
+
+Network/firewall restrictions
+
+SELinux/AppArmor blocking
+
+Docker version mismatch
+
+Kernel incompatibility
+
+Docker reduces problems — does NOT eliminate all.
+
+What I Would Verify
+
+docker version
+
+docker info
+
+CPU architecture
+
+Environment variables
+
+Port mapping
+
+Volume mounts
+
+Logs
+
+Kernel version
