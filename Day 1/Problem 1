@@ -1,0 +1,97 @@
+What problem was Docker created to solve?
+Explain in terms of:
+Deployment consistency
+Dependency management
+Infrastructure portability
+
+Solution:-
+Docker was created to solve environment inconsistency and dependency packaging problems in software delivery.
+
+🔹 1. Dependency Hell
+
+Applications depend on:
+
+Specific language runtimes
+
+OS libraries
+
+System packages
+
+Configuration files
+
+On different machines:
+
+Library versions differ
+
+OS distributions differ
+
+Kernel modules differ
+
+Result → “Works on my machine” problem.
+
+Docker solves this by packaging:
+
+Application code
+
+Runtime
+
+System libraries
+
+Dependencies
+into a single immutable image.
+
+🔹 2. Environment Drift
+
+Traditional servers:
+
+Long-lived
+
+Manually configured
+
+Hard to reproduce
+
+Over time → configuration drift.
+
+Docker introduced:
+
+Immutable images
+
+Declarative builds (Dockerfile)
+
+Reproducible environments
+
+Infrastructure becomes predictable.
+
+🔹 3. Infrastructure Portability
+
+Docker images can run anywhere:
+
+Developer laptop
+
+CI/CD pipeline
+
+Cloud VM
+
+On-prem
+
+Kubernetes cluster
+
+Because containers depend on:
+
+Host kernel
+
+Docker runtime
+
+Not full OS virtualization.
+
+🔹 4. Faster Delivery
+
+Compared to VMs:
+
+No OS boot
+
+No hypervisor overhead
+
+Faster startup
+
+Easier scaling
