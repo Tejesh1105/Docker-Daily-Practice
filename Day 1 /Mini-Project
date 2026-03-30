@@ -1,0 +1,17 @@
+🎯 Section 6: Mini Project
+Task
+Run nginx
+Replace default HTML
+Build custom image
+
+Solution:-
+
+Dockerfile:
+FROM nginx:latest
+COPY ./html /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+Commands:
+docker build -t my-nginx .
+docker run -d -p 8080:80 my-nginx
