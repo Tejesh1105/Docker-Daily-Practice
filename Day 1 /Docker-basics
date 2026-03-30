@@ -1,0 +1,37 @@
+📘 Topic: What is Docker (Deep Understanding)
+💡 Real-World Analogy
+
+Think of Docker like:
+
+👉 Shipping containers in logistics
+
+Every container = same format
+Can run anywhere (ship, truck, port)
+No dependency issues
+
+👉 Same in Docker:
+
+App + dependencies packaged together
+Runs anywhere (your laptop, cloud, server)
+🧠 Core Concept
+VM vs Container:
+Feature	VM	Docker
+OS per app	Yes	No
+Size	GBs	MBs
+Startup time	Minutes	Seconds
+Performance	Heavy	Lightweight
+⚙️ Docker Architecture (VERY IMPORTANT)
+
+Flow:
+
+docker CLI → Docker Daemon → containerd → runc → Container
+Breakdown:
+Docker CLI → what you type (docker run)
+Docker Daemon → brain (manages everything)
+containerd → manages containers lifecycle
+runc → actually runs container using Linux features
+
+👉 Internally uses:
+
+Namespaces → isolation
+cgroups → resource control
