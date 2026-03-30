@@ -1,0 +1,13 @@
+Q1: Why Docker instead of VM?
+
+👉 Lightweight, faster, efficient resource usage
+
+Q2: What happens internally when you run docker run?
+
+👉 Flow:
+
+CLI → Daemon → Pull Image → Create Container → Setup Network → Start Process
+
+Q3: Why containers exit immediately sometimes?
+
+👉 Main process (PID 1) stops
