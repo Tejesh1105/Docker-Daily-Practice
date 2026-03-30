@@ -1,0 +1,42 @@
+Section 1: Hands-on Task (Docker Run)
+Command:
+docker run -d -p 8080:80 nginx
+Questions
+1. What does -d do?
+2. What does -p 8080:80 mean internally?
+3. Where is nginx actually running? Host or container?
+4. Why can multiple nginx containers run on the same machine?
+
+Solutions:- 
+
+1. -d (Detached Mode)
+Runs container in background
+Frees terminal immediately
+Without -d, container runs in attached mode
+
+2. -p 8080:80 (Port Mapping)
+
+Maps:
+
+Host (8080) → Container (80)
+🔍 Internal Flow:
+Browser → localhost:8080
+        ↓
+Host Network Stack
+        ↓
+iptables NAT rule (Docker)
+        ↓
+Docker Bridge Network
+        ↓
+Container (port 80)
+
+3. Where nginx runs?
+Inside container
+But container = isolated process on host kernel (not VM)
+
+4. Multiple Containers
+Because of:
+
+Namespaces → isolation
+cgroups → resource control
+Shared kernel → lightweight
