@@ -1,0 +1,32 @@
+Questions
+Image vs Container?
+Docker Daemon?
+Namespaces?
+cgroups?
+Why containers lightweight?
+Solutions :- 
+
+1. Image vs Container
+Image → read-only template
+Container → running instance
+
+2. Docker Daemon
+Background service managing:
+containers
+images
+networks
+volumes
+
+3. Namespaces
+Provide isolation:
+PID, NET, MNT, IPC, UTS
+
+4. cgroups
+Control resources:
+CPU, memory, IO
+
+5. Lightweight
+No full OS
+Shared kernel
+Faster startup
+Less memory
