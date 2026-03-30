@@ -1,0 +1,38 @@
+Section 2: Dockerfile Basics
+Dockerfile:
+FROM node:18
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["node", "app.js"]
+Questions
+What happens at each step?
+What is cached?
+What happens if only app.js changes?
+Why CMD instead of RUN?
+Solutions:- 
+
+1. Step-by-step
+Instruction	       What it does
+FROM	             Base image
+WORKDIR	           Sets working dir
+COPY	             Copies files
+RUN                Installs dependencies
+CMD	               Default runtime command
+
+Each creates a layer
+
+2. What is cached?
+Docker caches layers
+If no change → layer reused
+If change → rebuild from that step
+3. Change only app.js
+COPY . . changes → cache breaks
+RUN npm install runs again ❌
+
+This is inefficient (we fix later)
+
+4. CMD vs RUN
+RUN	                  CMD
+Build time	          Runtime
+Executes immediately	Executes on container start
