@@ -1,0 +1,25 @@
+Section 3: Debugging Scenario 1
+Command:
+docker run nginx
+
+Container stops.
+
+Questions
+Why did it stop?
+How will you debug?
+Which commands will you use?
+Solutions :-
+
+1. Root Cause
+Container runs in foreground
+Terminal exit → container stops
+
+2. Debugging Approach
+Check container status
+Check logs
+Inspect configuration
+
+3. Commands
+docker ps -a
+docker logs <id>
+docker inspect <id>
