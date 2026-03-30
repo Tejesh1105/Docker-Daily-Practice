@@ -1,0 +1,26 @@
+Section 5: CLI Practice
+Commands
+docker ps
+docker ps -a
+docker images
+docker logs <id>
+docker exec -it <id> bash
+Questions
+Difference between ps and ps -a?
+What happens in exec?
+Why are logs important?
+
+Solutions:- 
+1. ps vs ps -a
+ps → running containers
+ps -a → all containers
+
+2. exec
+Runs new process inside container
+Container must be running
+
+3. Logs Importance
+Debugging failures
+Monitoring behavior
+Incident analysis
+Production observability
