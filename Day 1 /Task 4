@@ -1,0 +1,28 @@
+Section 4: Debugging Scenario 2
+Command:
+docker run -p 8080:80 nginx
+
+Cannot access in browser.
+
+Questions
+Possible causes?
+How to verify container is running?
+Which command helps inspect networking?
+
+Solutions:-
+
+1. Possible Causes
+Container not running
+Port already in use
+Firewall blocking
+Wrong binding
+Docker network issue
+
+2. Verify Container
+docker ps
+docker ps -a
+
+3. Networking Debug
+docker port <id>
+docker inspect <id>
+curl localhost:8080
